@@ -1,7 +1,6 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -18,7 +17,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@ultirequiem/xkcd": "^0.0.0",
     "sirv-cli": "^2.0.0"
   }
 }

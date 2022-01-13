@@ -1,12 +1,58 @@
 <script>
-  export let title, src, num;
   import Footer from "./components/Footer.svelte";
+  import Header from "./components/Header.svelte";
+  import { onMount } from "svelte";
+
+  let literatureClubMembers = [];
+
+  onMount(async () => {
+    // Copy of "https://ddlcapi.herokuapp.com/characters", not working because of CORS
+    const response = await fetch("/data.json");
+    literatureClubMembers = await response.json();
+  });
 </script>
 
 <main>
-  <h1>{title}</h1>
-  <img {src} alt="Latest xkcd comic" />
-  <p>{num}</p>
+  <Header />
+  {#each literatureClubMembers as doki}
+    <div class="doki_container">
+      <h2>
+        {doki.name}
+      </h2>
+
+      <img src={doki.illustration} alt={`${doki.name} illustration`} />
+
+      <p>
+        Age: {doki.age}
+      </p>
+
+      {#if doki.birthday}
+        <p>
+          Birthday: {doki.birthday}
+        </p>
+      {/if}
+      <p>
+        Height : {`${doki.concept_height.inches}/${doki.concept_height.cm}cm`}
+      </p>
+
+      <p>
+        Appears on: {`${doki.appears.join(", ")}.`}
+      </p>
+
+      <p>
+        Eye Color: {doki.eye_color}
+      </p>
+
+      <p>
+        Hair Color: {doki.hair_color}
+      </p>
+
+      <p>
+        Filename: "{doki.filename}"
+      </p>
+    </div>
+  {/each}
+
   <Footer />
 </main>
 
@@ -26,7 +72,14 @@
   }
 
   main {
+    margin: 2%;
     text-align: center;
-    margin: 10%;
+  }
+
+  .doki_container {
+    border: 2px solid #0084f6;
+    border-radius: 10px;
+    margin-top: 2%;
+    background-color: #d8bfd8;
   }
 </style>

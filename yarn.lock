@@ -99,6 +99,11 @@
   dependencies:
     "@types/node" "*"
 
+"@ultirequiem/random-number@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@ultirequiem/random-number/-/random-number-0.0.0.tgz#adf1fcecb269c625b50183220e0bcd6b826bc040"
+  integrity sha512-YoEH+ZKT/j5U79dex/MiodLFnt5mH6timV/8x1jsFKfL6aU1g8w3+jSoY3YbsWI1eBFYjD9Lh27K0roWUUW0UQ==
+
 "@ultirequiem/xkcd@^0.0.0":
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@ultirequiem/xkcd/-/xkcd-0.0.0.tgz#5a9e8bcdb142f263a23cd09090b36979e67ae332"

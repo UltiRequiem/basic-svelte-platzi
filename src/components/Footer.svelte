@@ -14,6 +14,5 @@
 
   footer {
     bottom: 0;
-    margin-top: 100px;
   }
 </style>
