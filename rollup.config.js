@@ -9,9 +9,9 @@ const production = !process.env.ROLLUP_WATCH;
 function serve() {
   let server;
 
-  function toExit() {
+  const toExit = () => {
     if (server) server.kill(0);
-  }
+  };
 
   return {
     writeBundle() {
