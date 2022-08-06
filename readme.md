@@ -22,7 +22,7 @@ Don't forget to star the repo ⭐
 Maintainer 💪
 
 See also the full list of
-[contributors](https://github.com/UltiRequiem/basic-svelte-course/contributors)
+[contributors](https://github.com/UltiRequiem/basic-svelte-platzi/contributors)
 who participated in this project.
 
 ## Licence
